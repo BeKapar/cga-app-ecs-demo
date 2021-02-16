@@ -8,13 +8,13 @@ phases:
 
   build:
     command:
-      - "echo Build started on 'date'"
+      - "echo Build started on `date`"
       - "echo Building docker image"
       - "docker build -t cga-web-ecs ."
       - "docker tag cga-web-ecs:latest 734379968812.dkr.ecr.us-east-1.amazonaws.com/cga-web-ecs:latest"
-      
+
   post_build:
     command:
       - "echo Build is complete on 'date'"
-      - "echo pishing the docker image"
+      - "echo pushing the docker image"
       - "docker push 734379968812.dkr.ecr.us-east-1.amazonaws.com/cga-web-ecs:latest"
