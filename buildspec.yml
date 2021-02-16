@@ -15,6 +15,6 @@ phases:
 
   post_build:
     command:
-      - "echo Build is complete on 'date'"
-      - "echo pushing the docker image"
+      - "echo Build is complete on `date`"
+      - "echo Pushing the docker image"
       - "docker push 734379968812.dkr.ecr.us-east-1.amazonaws.com/cga-web-ecs:latest"
